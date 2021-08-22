@@ -18,7 +18,7 @@
 
     $mail->setFrom('joelcrajudeveloper@gmail.com','Joel C Raju');
 
-    $mail->addAddress('joelcrajudevelopes@gmail.com');
+    $mail->addAddress('joelcrajudeveloper@gmail.com');
 
     $mail->isHTML(true);
 
