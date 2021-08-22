@@ -260,7 +260,7 @@
     /*margin-bottom: 0%;*/
     /*margin: auto;*/
     border: 0 solid black;
-    position: fixed;
+    position: static;
     /*box-shadow: 0px 0px 0px white;*/
     border-radius: 18px;
   }
