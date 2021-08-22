@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+<!-- Navifation bar and Brand title/logo-->
+  <nav class="navbar navbar-expand-lg navbar-light" id="navigation-bar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#home">
+        <img src="assets/img/gilead-logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top navbar__name-icon" id="brand">
+        <span id="brand-title">Gilead Exports</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="nav-options">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#aboutus">About Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Product
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#aboutus">Gallery</a>
+          </li>
+
+          <!--<li class="nav-item">
+            <a class="nav-link" href="#aboutus">Contact Us</a>
+          </li>-->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div>
+ <!--================Background image container begins================-->
+    <div class="img-container">
+        <div id="img-text">
+            <h1 id="image-heading">GILEAD</h1>
+            <h2 id="image-sub-heading">Discover your natural beauty with our natural products</h2>
+        </div>
+        <img src="assets/img/4s.png" class="img-responsive" id="bg-image">
+    </div>
+<!--==========Background image container ends==============-->
+<!--===============Contact form container===================-->
+    <div id="contact-form">
+        <!--=======Inner contact form container========-->
+        <div id="contact-form-container">
+            <h2 id="contact-description">you have any questions or comments you may call, email, or fax us here at Chemsol.</h2>
+            <h1 id="form-heading">Contact us</h1>
+            <form action="Mailer.php" method="POST" name="form">
+                <div class="outer-input">
+                    <div class="inner-input">
+                        <h2 class="inp-text">CONTACT NAME</h2>
+                        <input class="inp" type="text" placeholder="Enter your Name" name="contactName">
+                    </div>
+                    <div class="inner-input">
+                        <h2 class="inp-text inp-req">COMPANY NAME</h2>
+                        <input class="inp" type="text" placeholder="Enter your Company Name" name="companyName" required>
+                    </div>
+                </div>
+                <div class="outer-input">
+                    <div class="inner-input">
+                        <h2 class="inp-text inp-req">EMAIL</h2>
+                        <input class="inp" type="email" placeholder="Enter your email" name="email" required>
+                    </div>
+                    <div class="inner-input">
+                        <h2 class="inp-text inp-req">PHONE NUMBER</h2>
+                        <input class="inp" type="number" placeholder="Enter your Ph. Number"
+                         id="PhoneNumber"  onblur="validatePhone()"  name="phoneNumber" required>
+                        <span id="phonePrompt"></span>
+                    </div>
+                </div>
+                <div class="outer-input">
+                    <div class="inner-input">
+                        <h2 class="inp-text">FAX NUMBER</h2>
+                        <input class="inp" id="address" type="text" placeholder="Enter your Fax number" name="faxNumber">
+                    </div>
+                </div>
+                <div class="outer-input">
+                    <div class="inner-input">
+                        <h2 class="inp-text">ADDRESS</h2>
+                        <input class="inp" id="address" type="text" placeholder="Enter your Address" name="address">
+                    </div>
+                </div>
+                 
+                
+                <div class="outer-input">
+                    <div class="inner-input">
+                        <h2 class="inp-text inp-req">REQUIREMENTS</h2>
+                        <!--<input class="inp" id="req" type="text" placeholder="Enter your Requirements">-->
+                        <textarea id="req" type="text" placeholder="Enter your Requirements" rows="3" cols="20" name="requirements"></textarea>
+                    </div>
+                </div>
+                <div id="btn-container">
+                <button type="submit" class="btn btn-success" id="confirm-btn">Confirm<img id="right-arrow" src="assets/img/right-arrow2.png"></button>
+                </div>
+            </form>
+        </div>
+        <!--=====inner contact form container end-->
+    </div>
+<!--==========Contact form container end================-->
+</div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/Contact-us-backend.js"></script>
+</body>
+
+</html>
