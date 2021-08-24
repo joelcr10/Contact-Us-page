@@ -328,6 +328,15 @@ img {
   }
 }
 
+@media (min-width: 1500px) {
+  #contact-form {
+    display: table-cell;
+    padding-top: 4%;
+    height: 164vh;
+  }
+}
+
+
 
 
 /*======================INNER FORM CONTAINER=================*/
