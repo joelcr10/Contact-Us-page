@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+
+<body>
+<header class="header" id="header">
+    <nav class="nav container">
+      <img src="assets/img/icon.jpg" alt="company" class="nav__img-logo">
+        <a href="#" class="nav__log">
+            Gilead Exports
+        </a>
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list grid">
+                <li class="nav__item">
+                    <a href="#home" class="nav__link">
+                        <i class="uil uil-home nav__icon"></i>Home
+                    </a>
+                </li> 
+
+                <li class="nav__item">
+                    <a href="#about" class="nav__link">
+                        <i class="uil uil-user-square nav__icon"></i>About Us 
+                    </a>
+                </li> 
+
+                <li class="nav__item">
+                    <a href="products/products.html" class="nav__link">
+                        <i class="uil uil-brain nav__icon"></i>Products
+                    </a>
+                </li> 
+
+                <li class="nav__item">
+                    <a href="#services" class="nav__link">
+                        <i class="uil uil-suitcase nav__icon"></i>Gallery 
+                    </a>
+                </li> 
+
+                <li class="nav__item">
+                    <a href="contact.html" class="nav__link">
+                        <i class="uil uil-scenery nav__icon"></i>Contact Us
+                    </a>
+                </li> 
+            <i class="uil uil-times nav__close" id="nav-close"></i>
+        </div>
+
+        <div class="nav__btns">
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="uil uil-apps"></i>
+            </div>
+        </div>               
+    </nav>
+        </header>
+
+<div>
+ <!--================Background image container begins================-->
+    <div class="img-container">
+        <!---==========Background Image Text=========-->
+        <div id="img-text">
+            <h1 id="image-heading">GILEAD</h1>
+            <h2 id="image-sub-heading">Discover your natural beauty with our natural products</h2>
+        </div>
+        <!--===========Background Image==============-->
+        <img src="assets/img/4s.png" class="img-responsive" id="bg-image">
+    </div>
+<!--==========Background image container ends==============-->
+
+<!--===============Contact form container===================-->
+
+    <div id="contact-form" class="container">
+        <!--=======Inner contact form container========-->
+
+        <div id="contact-form-container" class="">
+            <h2 id="contact-description">If you have any questions or comments you may call, email, or fax us here at Gilead Exports.</h2>
+            <h1 id="form-heading">Contact us</h1>
+
+            <!--============FORM=======================-->
+
+            <form action="Mailer.php" method="POST" name="form" class="form-group">
+
+                <!--OUTER INPUT GROUPS 2 INPUTS IN SINGLE LINE (Contact name and Company name)-->
+                <div class="outer-input"> 
+                    <div class="inner-input"><!--INNER INPUT GROUPS INPUT BOX AND THE TEXT ABOVE IT-->
+                        <h2 class="inp-text">CONTACT NAME</h2>
+                        <input class="inp" type="text" placeholder="Enter your Name" name="contactName">
+                    </div>
+                    <div class="inner-input">
+                        <h2 class="inp-text inp-req">COMPANY NAME</h2>
+                        <input class="inp" type="text" placeholder="Enter your Company Name" name="companyName" required>
+                    </div>
+                </div>
+
+                <!--OUTER INPUT GROUPS 2 INPUTS IN SINGLE LINE (email and phone number)-->
+                <div class="outer-input">
+                    <div class="inner-input">
+                        <h2 class="inp-text inp-req">EMAIL</h2>
+                        <input class="inp" type="email" placeholder="Enter your email" name="email" id="email" onblur="validateEmail()" required>
+                        <span id="emailPrompt"></span><!--For invalid email format entered-->
+                    </div>
+                    <div class="inner-input">
+                        <h2 class="inp-text inp-req">PHONE NUMBER</h2>
+                        <input class="inp" type="number" placeholder="Enter your Ph. Number"
+                         id="PhoneNumber"  onblur="validatePhone()"  name="phoneNumber" required>
+                        <span id="phonePrompt"></span><!--for invalid phone number digits entered-->
+                    </div>
+                </div>
+
+                <!--OUTER INPUT GROUPS 1 BIG INPUT IN SINGLE LINE (FAX NUMBER)-->
+                <div class="outer-input">
+                    <div class="inner-input">
+                        <h2 class="inp-text">FAX NUMBER</h2>
+                        <input class="inp" id="address" type="number" placeholder="Enter your Fax number" name="faxNumber">
+                    </div>
+                </div>
+
+                <!--OUTER INPUT GROUPS 1 BIG INPUT IN SINGLE LINE (ADDRESS)-->
+                <div class="outer-input">
+                    <div class="inner-input">
+                        <h2 class="inp-text">ADDRESS</h2>
+                        <input class="inp" id="address" type="text" placeholder="Enter your Address" name="address">
+                    </div>
+                </div>
+                 
+                <!--OUTER INPUT GROUPS 1 BIG INPUT IN SINGLE LINE (REQUIREMENTS)-->
+                <div class="outer-input">
+                    <div class="inner-input">
+                        <h2 class="inp-text inp-req">REQUIREMENTS</h2>
+                        <!--<input class="inp" id="req" type="text" placeholder="Enter your Requirements">-->
+                        <textarea id="req" type="text" placeholder="Enter your Requirements" rows="3" cols="20" name="requirements"></textarea>
+                    </div>
+                </div>
+
+                <!--======CONFRIM BUTTON=======-->
+                <div id="btn-container">
+                <button type="submit" class="btn btn-success" id="confirm-btn">Confirm<img id="right-arrow" src="assets/img/right-arrow2.png"></button>
+                </div>
+            </form>
+        </div>
+        <!--=====inner contact form container end-->
+    </div>
+<!--==========Contact form container end================-->
+</div>
+<!--==================Footer===============================-->
+<footer class="footer-distributed">
+ 
+  <div class="footer-left">
+  
+  <h3>Gilead Exports</h3> <br>
+  
+  <span class="footer__byline">"Discover your natural beauty with our natural products"
+  </span>
+
+  <br><br>
+  <span class="iso__logo">
+    <img src="assets/img/iso.jpg" alt="iso__logo" class="footer__iso-logo">
+  </span>  
+  </div>
+  
+  <div class="footer-center">
+  
+  <div class="contact-container">
+  <i class="fa fa-map-marker"></i>
+  <p><span>110 ,  Huda Market , Sector-29 , Faridabad </span> Haryana, India</p>
+  </div>
+  
+  <div class="contact-container">
+  <i class="fa fa-phone"></i>
+  <p>+1 555 123456</p>
+  </div>
+  
+  <div class="contact-container">
+    <i class="uil uil-envelope"></i>
+  <p><a href="mailto:support@company.com">Contact Us at : gileadexports@gmail.com</a></p>
+  </div>
+  
+  </div>
+  
+  <div class="footer-right">
+  
+  <p class="footer-company-about">
+  <span>About the company</span>
+  Gilead Exports is a company  for web designers, graphic designers, web developers &amp; SEO Learner.
+  </p>
+  
+  </div> <br><br> <br>
+
+  <p class="footer-company-name">Soul Society &copy; 2021</p>
+  
+  </footer>
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/Contact-us-backend.js"></script>
+</body>
+
+</html>
